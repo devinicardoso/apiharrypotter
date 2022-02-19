@@ -5,31 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/style.css">
-    <script src="assets/scripts/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
     <title>Api Harry Potter</title>
 </head>
 <body>
     <div class="container">
-        <main>
-            <header>
-                <h1>Personagens de Harry Potter</h1>
-            </header>
-            
-            <form action="">
-                <label>Informe o nome de um personagem</label>
-                <input type="text" name="pesquisar" id="pesquisar">
-
-                <button onclick="start()">Pesquisar</button>
-            </form>
-
-            <p name="nome"></p>
-
-        </main>
+        <h1>Personagens de Harry Potter</h1>
+        <!-- <div id="searchWrapper">
+            <input type="text" name="searchBar" id="searchBar" placeholder="Pesquise por um personagem" />
+        </div> -->
+        <ul id="charactersList"></ul>
     </div>
-    <br>
+    
     <footer>
         <p>made with 💕</p>
         <a href="#">© Vinicius Cardoso</a>
     </footer>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/main.js"></script>
 </body>
 </html>

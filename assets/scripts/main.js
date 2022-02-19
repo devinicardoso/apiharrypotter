@@ -1,17 +1,32 @@
-// const preencherFormulario = (endereco) => {
-//     document.getElementById('nome').value = endereco.name
-// }
+const charactersList = document.getElementById("charactersList");
 
-const pesquisarPersonagem = async () => {
-    // const nome = document.getElementById('pesquisar').value
-
-    const url = 'http://hp-api.herokuapp.com/api/characters'
-    const dados = await fetch(url)
-    const endereco = await dados.json()
-    // preencherFormulario(endereco)
-    console.log(endereco)
+const loadCharacters = async () => {
+    try {
+        const url = await fetch('http://hp-api.herokuapp.com/api/characters');
+        const dados = await url.json();
+        charactersPrint(dados);
+        console.log(dados);
+    } catch {
+        console.log(err);
+    }
 }
 
-function start() {
-    pesquisarPersonagem()
-}
+const charactersPrint = (characters) => {
+    const htmlString = characters
+        .map((characters) => {
+            return `
+            <li class="character">
+                <div class="text">
+                    <h2>${characters.name}</h2>
+                    <p>Data de aniversário: ${characters.dateOfBirth}</p>
+                    <p>Casa: ${characters.house}</p>
+                </div>
+                <img src="${characters.image}">
+            </li>
+        `;
+        })
+        .join('');
+        charactersList.innerHTML = htmlString;
+    }
+
+    loadCharacters();
