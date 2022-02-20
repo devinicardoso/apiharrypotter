@@ -2,7 +2,7 @@ const charactersList = document.getElementById("charactersList");
 
 const loadCharacters = async () => {
     try {
-        const url = await fetch('http://hp-api.herokuapp.com/api/characters');
+        const url = await fetch('https://hp-api.herokuapp.com/api/characters');
         const dados = await url.json();
         charactersPrint(dados);
         console.log(dados);
