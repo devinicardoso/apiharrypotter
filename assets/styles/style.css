@@ -24,7 +24,19 @@ h1 {
     font-weight: 700;
     font-size: 45px;
     text-align: center;
-    margin: 45px 0 120px 0;
+    margin: 45px 0 20px 0;
+}
+
+#searchWrapper {
+    margin: 0 auto 35px auto;
+    width: 500px;
+}
+
+#searchBar {
+    width: 500px;
+    height: 45px;
+    border-radius:15px;
+    padding-left: 10px;
 }
 
 #charactersList {
@@ -60,6 +72,26 @@ h1 {
 .character img {
     width: 150px;
     height: 190px;
+}
+
+footer {
+    padding-top: 50px;
+    display: table;
+    margin: 0 auto 0 auto;
+    color: #7a7a7a;
+}
+  
+a#vini{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: black 0.1em 0.1em 0.2em;
+  
+}
+  
+a#vini:hover {
+    color: #858181;
 }
 
 @media (max-width: 1400px) {
